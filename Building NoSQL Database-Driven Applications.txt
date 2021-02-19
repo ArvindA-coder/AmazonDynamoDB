@@ -1,0 +1,24 @@
+DynamoDB is a fully managed, serverless, NoSQL key value and document database that delivers single digit millisecond performance at any scale. It can handle more than 10 trillion requests per day and supports peaks of more than 20 million requests per second.
+
+
+DynamoDB Basics and concepts 
+
+Simple table design
+
+How to write quries
+
+Security and Monotoring 
+
+How to create a Multi-Master global Database
+
+Advanced Concepts
+
+
+AWS SDK , CommandLine and Console 
+
+
+
+Fantasy Car Game backed by Dynamo DB
+
+
+ NoSQL databases and the challenges they solve, dive deep into Amazon DynamoDB topics such as recovery, SDKs, partition keys, security and encryption, global tables, stateless applications, streams, and best practices.DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multiregion, multimaster database with built-in security, backup and restore, and in-memory caching for internet-scale applications. DynamoDB can handle more than 10 trillion requests per day and support peaks of more than 20 million requests per second.This course uses a combination of video-based lectures delivered by Amazon Web Services expert technical trainers, demonstrations, and hands-on lab exercises, that you run in your own AWS account  to enable you to build, deploy and manage your own DynamoDB-powered application.

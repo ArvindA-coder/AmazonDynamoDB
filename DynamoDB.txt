@@ -1,0 +1,61 @@
+We'll first discuss the need for NoSQL database systems, the problems they solve, and then go into some general functionality of how NoSQL systems work.
+
+ After that, we'll introduce some of the foundational information specifically about Amazon DynamoDB. 
+
+
+ Relational Databases and the Problem that Need Solving
+
+There are a number of reasons why you may be wanting to dive into using a NoSQL database system like DynamoDB. 
+You may be looking for something that provides an easier method for horizontal scalability.
+
+
+
+Before we start looking at how Amazon DynamoDB works, and ways to use it, let's put some things into context. 
+There are a number of reasons why you may be wanting to dive into using a NoSQL database system like DynamoDB. 
+You may be looking for something that provides an easier method for horizontal scalability. 
+Maybe you're looking for a low latency way to handle a high amount of transactional data. Or maybe, 
+you're just trying to learn as much as you can because your organization is planning to, is currently,
+ or has recently moved to DynamoDB, and you need to build your applications to utilize this system. 
+ Whatever the reason may be, it is important to understand some of the differences between a relational
+  database system that you may already have experience with and what answers a NoSQL system like DynamoDB offer.
+
+Starting with the relational database system, these were a big leap forward at their time.
+And the fact that they're still heavily utilized speaks to their strong functionality. 
+A major issue that occurred during the earlier days of data storage was the high expense of storage.
+The unstructured data required large amounts of storage and as the need for quick access to the data grew, 
+so did the need to better manage the cost of handling that data, while also continuing to keep up with the performance needs. 
+The relational database management system provided a way to normalize the data, in order to provide a methodology for analytical processing.
+The relational database application gave a strong analytical approach for business intelligence. It provided better access and organization for the 
+  data being created, and provided a system that could be both redundant and scalable.
+Another thing the relational system provided was a trade-off of storage costs for CPU costs.
+
+While the data was being stored in a much more efficient manner, the ability to consume and normalize that data required more compute capabilities 
+than was originally needed. Additionally, it took much more CPU power in order to take the normalized data across multiple datasets and tables,
+and display it based on what was being requested. While, as I previously stated, this methodology is still valid and relevant today, this course 
+is diving into Amazon DynamoDB not as a full replacement for all relational database management systems, but as an option that many use cases can benefit from.
+When looking at NoSQL, it is important to remember that this does not mean anti-SQL, but instead, not only SQL. This should be seen as another option to keep 
+in your tool bag, in addition to the relational systems. So before we dive into how NoSQL systems work,
+   
+  CAP Theorem:
+
+Let's quickly introduce the CAP Theorem. CAP, or C-A-P, stands for consistency, availability, and partition tolerance. 
+Consistency refers to the choice of either eventually or strongly consistent data. In a replicated and distributed system, 
+when you make a request for data, the data can be returned to you in two ways. The first way is that the system checks with the replication point,
+and returns the result stored at only that replication point. If the data has been updated before your request, but that update has not fully replicated 
+across all points, then you may be getting stale data. This data retrieval would be seen as eventually consistent. While there is a risk for retrieving 
+still data, the requests are oftentimes much faster. With strongly consistent, the request verifies that the data is the same across all replication points 
+before returning a result. These requests will provide the most up-to-date information, but the operations will oftentimes be slower and more computationally
+expensive. Keep these in mind as we will talk about them later. With availability, we're looking at our responses. In this context, availability in the 
+system is its ability to return a response quickly. That's pretty direct. So, let's go ahead and move on to partition tolerance. Partition tolerance is 
+the system's ability to maintain functionality, data retention, and consistency promises through failures of network or components. Within the CAP Theorem, 
+these are the three different goals we're trying to have. We want our system to always be able to return results and to return those results quickly. 
+We want to identify what our consistency needs are, and we want to have a system that is able to maintain operation and data integrity through partition tolerance. 
+If you imagine this as a triangle, then at one point, we have consistency, on another, we have availability, and on the last, we have partition tolerance.
+The theorem states that of these three, we can only have two of the options at the same time. Additionally, partition tolerance is a requirement for our 
+systems regardless of the use case. So because of this, our operations have to choose between consistency and availability. If we choose strongly consistent,
+then we are choosing the consistency and partition tolerance, and our availability will suffer in the response times. If we choose the highest levels of
+ availability, then we are choosing availability and partition tolerance, and our consistency will be eventual instead of strong.
+You'll see more about how this plays out later, but that should give you a basic understanding of the theorem. With that, we'll bring this session to a close.
+
+
+ In the next session, we'll be looking at the general functionality of how NoSQL databases work. See you then.

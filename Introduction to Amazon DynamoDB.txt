@@ -1,0 +1,42 @@
+let's dive into Amazon DynamoDB. This session will focus on introducing you to DynamoDB from a high level. As we continue to go through the course, 
+you'll get introduced to deeper and more detailed areas of the service, and will get more information around properly building and optimizing your DynamoDB system.
+The first topic we want to discuss is the table in DynamoDB. A table is, in its most basic form, a collection of zero or more items. 
+While I am showing this table as a grid, the table is, in fact, just items that are organized and can be queried through their keys. 
+
+The items themselves are made up of their attributes. The attributes are the values associated with the keys that are set up for the table. 
+The only required attribute for all items is the primary key, also called the partition key. This key is there to provide the organizational structure for the table. 
+In a table using only partition keys, no two items can have the same partition key value. If, on the other hand, you were using a table with both partition and sort keys, 
+you have a little more flexibility with both of your key values and your organization in the tables. It is worth noting that even though duplication of keys is possible
+ within this table type, you still cannot have full duplication. What I mean is, that while the primary or
+sort key can be duplicated, you cannot duplicate the primary and sort key within the table. This should start to hint at how important data modeling is when using 
+DynamoDB or any other NoSQL system. Okay, now that we've introduced the basic concepts of table, item, attribute, and the partition and sort keys, let's quickly look at the
+functionality of a table. Here, as an introduction, we are going to be looking at this in the context of the Amazon DynamoDB on-demand type. Other options in DynamoDB give you more control
+over your performance, but DynamoDB on-demand will be a good place to start. The first thing you do, of course, is create the table. When creating the table, you immediately need to specify the partition key that
+you are going to use. While we discussed what the partition keys and attributes are, one thing I left out is the fact that you can choose the
+attribute input type that is used by the table. 
+
+You have choices like string, Boolean, integer, date, and more. We're not going to go through all of these attribute types, but you should remember
+that, when you set your key, you also need to set the data type for DynamoDB to use. So now that the hypothetical
+table is created, your basic functions give you the ability to create, update,delete, and query items. Currently, there is only
+the partition key field, but other fields can also be created, either beforehand or as you create and update items. Also, the other attribute fields can have different
+ data types so that you can have exactly the kind of data you need represented. Creating an item is when you would add a partition key value for the item being created,
+  as well as any other fields and attributes you want
+to add to that item. You also have the ability to update your items by modifying any of the attributes or adding additional fields or attributes. Whenever data is put
+ into or modified within your table, the changes are replicated across multiple storage facilities within the AWS Region. This is not replication
+that you have to manage, but this does provide you with some built-in durability for the data. When reading the item, you have the option to do a strongly or an 
+eventually consistent read. We discussed what these
+mean in an earlier video, so all I really want to point out here is that the type of read that you request is going to impact your performance. Strongly consistent 
+reads are heavier, and your throughput needs to be higher in order to handle the same number of operations as when working with
+eventually consistent reads. We will dive into much more detail when we talk about optimizations and your read and write capacities, later. But, for now, just know
+that stronger consistency is going to be heavier processing for the system. In the following module, Morgan will be showing you these basic functions through a demo. 
+But before I let you go, let's look quickly at some limits that you should be aware of when working with DynamoDB. The first limit I want to point out is, while the 
+table size does not have a stated limit, individual items do. 
+
+The max item size for DynamoDB items is 400 kilobytes. I bring this one up because an important consideration for DynamoDB usage is that it isn't going to be used for 
+your large data blobs in, say, the way that Amazon S3 would be. Instead, as an example, large objects could be stored in S3, while the metadata is
+being stored in DynamoDB. Another limit I want to particularly point out is the minimum and maximum key lengths. 
+
+The minimum key length for partition and sort keys is 1 byte. The maximum length for a partition key is 2048 bytes. 
+And the maximum sort key length is half of this, at 1024 bytes. Other limits can be found in the AWS documentation, 
+which we have linked in the course notes. Depending on your various use cases, you may need to make note of these limits. 
+Regardless, it's worth a review. Well, that's all for now. Following this will be a demo with Morgan. See you later.

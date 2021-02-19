@@ -1,0 +1,43 @@
+ looking at the general functionalityb of NoSQL database systems. Just as a quick review, in the last section, we talked about how, while relational database systems were a huge step forward
+in data management, and while they helped to handle the cost associated with the storage of data, the trade-offs were that data management became more expensive from
+a computational perspective. Additionally, relational systems are great for analytical processing, but what about scenarios where you need something more geared towards
+transactional functions? 
+
+Those are some of the areas where NoSQL options can really aid in application. But before we start really diving in to how the NoSQL options operate, 
+
+I want to point out some areas where NoSQL systems do not always find their advantages. 
+
+First, when working with a system that is self-managed, or DIY, provisioning still needs to be done for peak load. Depending on the system and the use, 
+end time horizontal scaling may not always be an option.  In these times, the system needs to be provisioned and ready to go for expected peaks in the workload. 
+
+Second, NoSQL databases are made up of denormalized data. Querying of normalized highly structured data can become very complex, but it also provides very
+strong analytical advantages. Lastly, and this is a bit of a continuation from the second point, NoSQL systems do not have cross-table relationships. 
+Where traditional databases supported data access across tables with a single query, NoSQL options require additional tools or functions to make calls
+to multiple tables at once. While these may seem like roadblocks to using a NoSQL system, that is not the intention here. 
+
+The goal of these points is to stress how important it is to strongly evaluate the scenarios in which NoSQL databases are being considered, in order to ensure that they provide the functionality you're looking for. So now that we've
+mentioned some of the areas where NoSQL options may not be the best solution, let's start diving into operations of these systems. 
+
+First, let's look at the types. We've been talking about NoSQL options as if they're all the same, up until now. 
+In reality, there are three main types of NoSQL databases.
+
+ You have
+ 
+- key-value, 
+- column-based
+- document-based storage.
+
+ Document-based store is categorized by its ability to store documents made up of tagged elements. If you've looked into MongoDB, then you may be familiar with this type. 
+ With the column-based or column-oriented databases, like Cassandra and HBase, data is stored and optimized for fast retrieval of a lot of data. 
+ This is in contrast tothe row-based storage or row-oriented storage of traditional relational databases. 
+ With columnar systems, you are able to work and retrieve large datasets because of
+the column-based retrieval. Where we will be focusing most in this course, though, is the key-value data stores. This is where you'll find systems like Amazon DynamoDB.
+ These provide large hash tables of keys and values, and give you the ability to query for items that are organized by their key structure. 
+ DynamoDB is a great solution for many use cases when
+looking for a NoSQL option. First, because it's a managed system, there is less focus on building and architecting the underlying system, and more ability to focus on 
+performance. DynamoDB gives you the ability to directly manage the level of performance you want to achieve through adjustment of your read and write capacity units. 
+
+We'll discuss these in more detail later. DynamoDB also provides areally strong feature set. With DynamoDB Streams, transactions, Accelerator, support for
+global tables, and more, you have several options to help you get the level and type of functionality you're looking for. With DynamoDB's low latency, redundant storage, and
+managed durability and fault tolerance, you start to see why we have a course dedicated to the utilization and optimization of this service. Now that we're past some of
+the background information, let's start diving into DynamoDB.

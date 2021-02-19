@@ -1,0 +1,18 @@
+ You will learn how to use Amazon DynamoDB from the basics all the way to some more advanced patterns. You will learn troubleshooting,
+optimizing, and loads more. So, what am I going to have you folks build? 
+
+Well, here's a story, so you can play along. One of your friends, who you've known for years, Mary, has asked for some help with her new fantasy dragon card game. She wants you to build a website that shows dragon cards, so you can search a particular dragon by name and bring up all of the card details. Sounds straightforward, right?
+
+Well, we're going to have you build a serverless S3 hosted website backed by Amazon API Gateway and AWS Lambda, with all of the data stored
+in, well, guess where? Amazon DynamoDB. Meaning, the whole thing can be totally serverless. Also, please don't worry
+about coding the website, that's actually all taken care of. We're going to have you
+focus on writing the code that interacts with the database. So, of course you might have to configure a few AWS
+services here and there, just to make the exercise work, but we're going to keep that to a minimum. As you'll see later on,
+you'll learn how to monitor, troubleshoot, secure, and even optimize the whole thing. As you progress through these labs, you will encounter different
+challenges week by week. Now, it sounds simple, right? Pointing a website at some dynamic data, I mean, what could possibly go wrong? Well, as you'll find out,
+the more you create for Mary, the more she will ask of you. Throughout these exercises, you will learn some really interesting
+features of DynamoDB and some supporting AWS technologies. Now, I know what you're thinking. You might be tempted to skip ahead through some of these videos
+and just do the exercises. However, I think there's a lot of really good information in there. Now although the information is not directly related to the exercises, they will help you conceptually with what you're doing
+inside the exercises. I think you'll enjoy them,
+but if you do get stuck, reach out to the team and fellow students in the weekly forums. Also, for the latest
+information and instructions, please check the course notes. That's where you're going to get the most up-to-date information. Okay, I'm done. I'm going to hand you over to Seph, and I'll see you prior to each exercise to give you a very short summary of what you're going to do in each one. All right, I'm going to see you soon.
